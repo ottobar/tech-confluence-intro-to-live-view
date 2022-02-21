@@ -64,6 +64,12 @@
             "problemMatcher": []
         },
         {
+            "label": "Mix - tailwind.install",
+            "type": "shell",
+            "command": "mix tailwind.install",
+            "problemMatcher": []
+        },
+        {
             "label": "Elixir Version",
             "type": "shell",
             "command": "elixir --version",
