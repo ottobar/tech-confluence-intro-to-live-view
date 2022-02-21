@@ -1,4 +1,6 @@
-# TechConfluenceIntroToLiveView
+# Tech Confluence - Introduction to Phoenix LiveView
+
+Tiny demo Phoenix LiveView app for the Tech Confluence Meetup 2022-04-20.
 
 To start your Phoenix server:
 
