@@ -1,0 +1,85 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "label": "Tests",
+            "type": "shell",
+            "command": "mix test",
+            "problemMatcher": [],
+            "options": {
+                "env": {
+                    "MIX_ENV": "test"
+                }
+            }
+        },
+        {
+            "group": "test",
+            "label": "Tests - Current File",
+            "type": "shell",
+            "command": "mix test ${relativeFile}",
+            "problemMatcher": [],
+            "options": {
+                "env": {
+                    "MIX_ENV": "test"
+                }
+            }
+        },
+        {
+            "group": "test",
+            "label": "Tests - Current Line",
+            "type": "shell",
+            "command": "mix test ${relativeFile}:${lineNumber}",
+            "problemMatcher": [],
+            "options": {
+                "env": {
+                    "MIX_ENV": "test"
+                }
+            }
+        },
+        {
+            "label": "Phoenix Web Server",
+            "type": "shell",
+            "command": "iex -S mix phx.server",
+            "problemMatcher": []
+        },
+        {
+            "label": "IEx",
+            "type": "shell",
+            "command": "iex -S mix",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Mix - deps.get",
+            "type": "shell",
+            "command": "mix deps.get",
+            "problemMatcher": []
+        },
+        {
+            "label": "Elixir Version",
+            "type": "shell",
+            "command": "elixir --version",
+            "problemMatcher": []
+        },
+        {
+            "label": "Erlang Version",
+            "type": "shell",
+            "command": "erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), \"releases\", erlang:system_info(otp_release), \"OTP_VERSION\"])), io:fwrite(Version), halt().' -noshell",
+            "problemMatcher": []
+        },
+        {
+            "label": "Node Version",
+            "type": "shell",
+            "command": "node --version",
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Tech Confluence - Intro to LiveView",
+    "dockerComposeFile": "docker-compose.yml",
+    "forwardPorts": [4000],
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "extensions": [
+        "HookyQR.beautify",
+        "jakebecker.elixir-ls",
+        "stkb.rewrap"
+    ]
+}
