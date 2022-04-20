@@ -9,7 +9,8 @@ import Config
 
 # Start the phoenix server if environment is set and running in a release
 if System.get_env("PHX_SERVER") && System.get_env("RELEASE_NAME") do
-  config :tech_confluence_intro_to_live_view, TechConfluenceIntroToLiveViewWeb.Endpoint, server: true
+  config :tech_confluence_intro_to_live_view, TechConfluenceIntroToLiveViewWeb.Endpoint,
+    server: true
 end
 
 if config_env() == :prod do

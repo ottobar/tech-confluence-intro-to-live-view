@@ -1,0 +1,61 @@
+<div class={bg_color(@active_color)}>
+  <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-extrabold tracking-wide text-white sm:text-4xl">
+      <span class="block">Hello, Tech Confluence!</span>
+    </h2>
+  </div>
+</div>
+
+<div>
+  <div class="max-w-2xl mx-auto text-center py-4 px-4 sm:py-6 sm:px-6 lg:px-8">
+    <p class="my-4 text-lg leading-6 text-stone-700">Select a color:</p>
+
+    <div>
+      <div class="relative z-0 rounded-lg shadow flex divide-x divide-gray-200" aria-label="Tabs">
+        <a
+          phx-click="change-color"
+          phx-value-color="raspberry"
+          class={
+            "text-raspberry-500 hover:text-raspberry-900 #{font_bold_if_active_color(@active_color, "raspberry")} rounded-l-lg group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm text-center hover:bg-pink-50 focus:z-10"
+          }
+        >
+          <span>Raspberry</span>
+          <span class={"#{bg_transparent_unless_active_color(@active_color, "raspberry")} absolute inset-x-0 bottom-0 h-1"}></span>
+        </a>
+
+        <a
+          phx-click="change-color"
+          phx-value-color="slate-blue"
+          class={
+            "text-slate-blue-500 hover:text-slate-blue-900 #{font_bold_if_active_color(@active_color, "slate-blue")} group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm text-center hover:bg-indigo-50 focus:z-10"
+          }
+        >
+          <span>Slate Blue</span>
+          <span class={"#{bg_transparent_unless_active_color(@active_color, "slate-blue")} absolute inset-x-0 bottom-0 h-1"}></span>
+        </a>
+
+        <a
+          phx-click="change-color"
+          phx-value-color="indigo-dye"
+          class={
+            "text-indigo-dye-500 hover:text-indigo-dye-900 #{font_bold_if_active_color(@active_color, "indigo-dye")} group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm text-center hover:bg-sky-50 focus:z-10"
+          }
+        >
+          <span>Indigo Dye</span>
+          <span class={"#{bg_transparent_unless_active_color(@active_color, "indigo-dye")} absolute inset-x-0 bottom-0 h-1"}></span>
+        </a>
+
+        <a
+          phx-click="change-color"
+          phx-value-color="byzantine"
+          class={
+            "text-byzantine-500 hover:text-byzantine-900 #{font_bold_if_active_color(@active_color, "byzantine")} rounded-r-lg group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm text-center hover:bg-fuchsia-50 focus:z-10"
+          }
+        >
+          <span>Byzantine</span>
+          <span class={"#{bg_transparent_unless_active_color(@active_color, "byzantine")} absolute inset-x-0 bottom-0 h-1"}></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,7 +6,8 @@
     "workspaceFolder": "/workspace",
     "extensions": [
         "HookyQR.beautify",
-        "jakebecker.elixir-ls",
+        "JakeBecker.elixir-ls",
+        "phoenixframework.phoenix",
         "stkb.rewrap"
     ]
 }
