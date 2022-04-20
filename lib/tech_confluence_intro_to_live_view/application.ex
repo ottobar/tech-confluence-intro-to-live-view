@@ -13,9 +13,10 @@ defmodule TechConfluenceIntroToLiveView.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: TechConfluenceIntroToLiveView.PubSub},
       # Start the Endpoint (http/https)
-      TechConfluenceIntroToLiveViewWeb.Endpoint
+      TechConfluenceIntroToLiveViewWeb.Endpoint,
       # Start a worker by calling: TechConfluenceIntroToLiveView.Worker.start_link(arg)
       # {TechConfluenceIntroToLiveView.Worker, arg}
+      TechConfluenceIntroToLiveView.ActiveColor
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

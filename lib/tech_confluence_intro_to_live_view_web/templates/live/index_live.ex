@@ -1,6 +1,8 @@
 defmodule TechConfluenceIntroToLiveViewWeb.IndexLive do
   use TechConfluenceIntroToLiveViewWeb, :live_view
 
+  alias TechConfluenceIntroToLiveView.ActiveColor
+
   # @colors %{
   #   "byzantine" => "bg-byzantine-500",
   #   "indigo-dye" => "bg-indigo-dye-500",
@@ -9,12 +11,23 @@ defmodule TechConfluenceIntroToLiveViewWeb.IndexLive do
   # }
 
   def mount(_params, _session, socket) do
-    socket = assign(socket, active_color: "raspberry")
+    active_color = ActiveColor.get_active_color()
+    socket = assign(socket, active_color: active_color)
+
+    if connected?(socket) do
+      ActiveColor.subscribe()
+    end
 
     {:ok, socket}
   end
 
   def handle_event("change-color", %{"color" => color}, socket) do
+    ActiveColor.assign_active_color(color)
+
+    {:noreply, socket}
+  end
+
+  def handle_info({:color_changed, color}, socket) do
     socket = assign(socket, active_color: color)
 
     {:noreply, socket}
