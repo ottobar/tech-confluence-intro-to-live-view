@@ -17,7 +17,7 @@ defmodule TechConfluenceIntroToLiveViewWeb.Router do
   scope "/", TechConfluenceIntroToLiveViewWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    live "/", IndexLive
   end
 
   # Other scopes may use custom stacks.
